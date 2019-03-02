@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+
+  <a [routerLink]="['/']" class="logo"></a>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="/propos"><mat-icon>add_alert</mat-icon>A propos</button>
+    <button mat-button routerLink="/clients"><mat-icon>bar_chart</mat-icon>Clients</button>
+    <button mat-button routerLink="/produits"><mat-icon>add_shopping_cart</mat-icon>Produits</button>
+    <button mat-button routerLink="/nutriments"><mat-icon>account_circle</mat-icon>Nutriments</button>
+  </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item routerLink="/login">Déconnexion</button>
+</mat-menu>

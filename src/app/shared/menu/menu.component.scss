@@ -1,0 +1,11 @@
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.logo {
+  background-image: url('../../../assets/images/logo.png');
+  width: 105px;
+  height: 105px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
